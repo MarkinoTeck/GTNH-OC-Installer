@@ -1,5 +1,5 @@
 # GTNH-OC-Installer
 
 ```shell
-pastebin run ESUAMAGx
+wget -f https://raw.githubusercontent.com/MarkinoTeck/GTNH-OC-Installer/main/installer.lua && installer
 ```
