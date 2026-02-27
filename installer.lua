@@ -8,7 +8,7 @@ local internet = require("internet")
 ---@field description string
 ---@field url string
 
-local programListUrl = "https://raw.githubusercontent.com/Navatusein/GTNH-OC-Installer/main/programs.lua"
+local programListUrl = "https://raw.githubusercontent.com/MarkinoTeck/GTNH-OC-Installer/main/programs.lua"
 
 local tarManUrl = "https://raw.githubusercontent.com/mpmxyz/ocprograms/master/usr/man/tar.man"
 local tarBinUrl = "https://raw.githubusercontent.com/mpmxyz/ocprograms/master/home/bin/tar.lua"
