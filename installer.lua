@@ -110,21 +110,21 @@ end
 
 ---Make auto run
 local function makeAutoRun()
-  term.write("\nCreate auto run [y/n]\n")
+  term.write("\nCreate auto run [Y/n]\n")
   term.write("===>")
 
   local userInput = io.read()
 
   term.clear()
 
-  if string.lower(userInput) == "y" then
+  if string.lower(userInput) == "n" then
+    term.write("Auto run ignored\n")
+  else
     local file = assert(io.open("/home/.shrc", "w"))
     file:write("main")
     file:close()
 
     term.write("Auto run created\n")
-  else
-    term.write("Auto run ignored\n")
   end
 end
 
@@ -134,7 +134,7 @@ local function main()
   checkGithub()
 
   term.clear()
-  term.write("Welcome to Navatusein's programs installer\n\n")
+  term.write("Welcome to LookItsMark's programs installer! [installer by Navatusein]\n\n")
 
   downloadTarUtility()
   local programList = getProgramList(programListUrl)
