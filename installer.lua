@@ -2,6 +2,7 @@ local shell = require("shell")
 local term = require("term")
 local filesystem = require("filesystem")
 local internet = require("internet")
+local computer = require("computer")
 
 ---@class ProgramDescription
 ---@field name string
@@ -128,6 +129,22 @@ local function makeAutoRun()
   end
 end
 
+--- Ask for reboot
+local function askForReboot()
+  term.write("\nReboot now? [Y/n]\n")
+  term.write("===>")
+
+  local userInput = io.read()
+
+  term.clear()
+
+  if string.lower(userInput) == "n" then
+    term.write("Installation completed.\n")
+  else
+    computer.shutdown(true)
+  end
+end
+
 ---Main
 local function main()
   checkIsOsInstall()
@@ -144,6 +161,7 @@ local function main()
 
   makeAutoRun()
   downloadProgram(programUrl)
+  askForReboot()
 end
 
 main()
